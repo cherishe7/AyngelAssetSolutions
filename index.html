@@ -62,5 +62,167 @@
     .bullets li{display:flex;gap:10px}
     .dot{
       width:10px;height:10px;
-      background:linear-gradient(
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      border-radius:50%;margin-top:7px;
+    }
+    .trust{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:18px;
+    }
+    @media(max-width:900px){.trust{grid-template-columns:1fr}}
+    .t{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(148,163,184,.16);
+      border-radius:14px;
+      padding:14px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 16px;
+      border-radius:14px;
+      font-weight:700;
+      text-decoration:none;
+      border:none;
+      cursor:pointer;
+    }
+    .primary{
+      background:linear-gradient(135deg,var(--accent),#16a34a);
+      color:#052e16;
+    }
+    form{display:grid;gap:12px}
+    input,select,textarea{
+      width:100%;
+      padding:12px;
+      border-radius:12px;
+      border:1px solid rgba(148,163,184,.22);
+      background:#020617;
+      color:var(--text);
+    }
+    textarea{min-height:90px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media(max-width:520px){.row{grid-template-columns:1fr}}
+    .note{
+      background:rgba(56,189,248,.08);
+      border:1px solid rgba(56,189,248,.22);
+      padding:12px;
+      border-radius:14px;
+      font-size:13px;
+    }
+    footer{margin-top:24px;font-size:12px;color:var(--muted)}
+    .disclaimer{
+      margin-top:14px;
+      border-top:1px solid rgba(148,163,184,.18);
+      padding-top:14px;
+      font-size:12px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">🏠 Ayngel Management</div>
+  <div class="badge">Free Review • No Upfront Fees • Call (786) 475-7261</div>
+</header>
+
+<main class="hero">
+
+<section class="card">
+<div class="pad">
+
+<h1>You may be owed surplus funds from a Florida foreclosure.</h1>
+
+<p class="sub">
+At <b>Ayngel Management</b>, we help former property owners and families understand
+whether surplus funds may be available after a Florida foreclosure sale.
+We guide you through the process with clarity, care, and transparency.
+</p>
+
+<ul class="bullets">
+  <li><span class="dot"></span> Review of Florida county and Clerk of Court records</li>
+  <li><span class="dot"></span> Guidance through required filings and claim steps</li>
+  <li><span class="dot"></span> No upfront fees — we only get paid if funds are recovered</li>
+</ul>
+
+<p class="sub">
+We understand that dealing with foreclosure or unclaimed funds can feel overwhelming.
+Our team works from official county records to identify potential surplus funds
+and explain your options clearly—so you can decide what’s best for you.
+</p>
+
+<div class="trust">
+  <div class="t"><b>Clear & Transparent</b><br>We explain the process upfront.</div>
+  <div class="t"><b>No Financial Risk</b><br>No upfront fees, ever.</div>
+  <div class="t"><b>Florida-Focused</b><br>Experience with Florida procedures.</div>
+</div>
+
+<div class="disclaimer">
+<b>Disclaimer:</b> Ayngel Management is not a law firm and does not provide legal advice.
+We assist with surplus fund recovery services related to Florida foreclosure cases.
+All claims are subject to court and Clerk of Court approval. Results vary by case.
+</div>
+
+</div>
+</section>
+
+<aside class="card">
+<div class="pad">
+
+<h2>Free Surplus Funds Review</h2>
+<p class="sub">Submit your details below. There is no cost to get started.</p>
+
+<form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="thank-you.html">
+
+<div class="row">
+  <input name="name" placeholder="Full Name" required>
+  <input name="phone" placeholder="Phone Number" required>
+</div>
+
+<div class="row">
+  <input name="email" type="email" placeholder="Email" required>
+  <select name="state" required>
+    <option value="">State</option>
+    <option>FL</option>
+  </select>
+</div>
+
+<input name="address" placeholder="Property Address or County">
+<input name="case" placeholder="Case Number (if known)">
+<textarea name="notes" placeholder="Additional details (optional)"></textarea>
+
+<div class="note">
+✅ <b>No upfront fees.</b><br>
+You only pay if surplus funds are successfully recovered.
+</div>
+
+<button class="btn primary" type="submit">Request Free Review</button>
+
+</form>
+
+</div>
+</aside>
+
+</main>
+
+<footer>
+© <span id="yr"></span> Ayngel Management. All rights reserved.
+</footer>
+
+</div>
+
+<script>
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
 
